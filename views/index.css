@@ -1,0 +1,38 @@
+body {
+	/*background: url("https://images.unsplash.com/photo-1506438282024-325f33f047aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2816&q=80");*/
+	background-color: #BBCEFF;
+	/*background-size: cover;*/
+	/*background-position: center;*/
+	font-family: lato;
+	border-width: 2px;
+}
+
+.navbar {
+	color: #EAEAEA;
+}
+
+#content {
+	padding: 50px;
+}
+
+/*html{
+	height: 100%;
+}*/
+
+h1 {
+	font-weight: 700;
+	font-size: 5rem;
+}
+
+/*#content{
+	text-align: center;
+	padding: 5%;
+	margin: 10px;
+}*/
+
+
+#temp {
+	/*border-color: #EAEAEA;*/
+	border-width: 3px;
+	margin: 5px;
+}

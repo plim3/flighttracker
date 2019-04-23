@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>ARCGIS MAP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+	<script src="https://js.arcgis.com/4.11/"></script>
+
+	<link rel="stylesheet" href="map.css">
+	<script>
+	require([
+			"esri/Map",
+			"esri/views/SceneView"
+		], function(Map, SceneView) {
+
+
+		var map = new Map({
+			basemap: "hybrid"
+		});
+
+
+
+		//*** ADD ***//
+		//var view = new MapView({
+		var view = new SceneView({
+			container: "viewDiv",
+			map: map,
+			//*** ADD ***//
+			//center: [-118.71511,34.09042],
+			//zoom: 15,
+			camera: {
+				tilt: 0,
+				position: {
+					x: -77.307615,
+					y: 38.830054,
+					z: 500 // meters
+				}
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">CS 321</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Callsign Search <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">Map</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Clear Search History</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="viewDiv"></div>
+
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
